@@ -36,6 +36,7 @@ a{color:var(--gold)}
 .tab-btn{background:none;border:none;color:var(--muted);font-size:1.05rem;font-weight:700;padding:14px 22px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s}
 .tab-btn:hover{color:var(--text)}
 .tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn.tab-link{text-decoration:none;display:inline-block}
 .tab-panel{display:none}
 .tab-panel.active{display:block;animation:fadeIn .25s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -93,33 +94,15 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <div class="wrap" id="tabs">
   <div class="tabs" role="tablist">
-    <button class="tab-btn active" data-tab="options" role="tab">📈 選擇權</button>
-    <button class="tab-btn" data-tab="casino" role="tab">🎲 賭場優勢玩法</button>
-    <button class="tab-btn" data-tab="cruise" role="tab">🚢 贈禮郵輪</button>
+    <a class="tab-btn tab-link" href="https://hedgewizs.github.io/optionswizard/tw/">📈 選擇權</a>
+    <a class="tab-btn tab-link" href="https://hedgewizs.github.io/thecasinocruiser/tw/">🚢 贈禮郵輪</a>
+    <button class="tab-btn active" data-tab="casino" role="tab">🎲 賭場優勢玩法</button>
     <button class="tab-btn" data-tab="hotel" role="tab">🏨 飯店優惠</button>
   </div>
 
   <!-- OPTIONS TAB -->
-  <div class="tab-panel active" id="panel-options" role="tabpanel">
-    <div class="thesis">大多數交易者像<b>賭徒</b>一樣買入選擇權——然後付出時間價值。我反其道而行：<b>成為莊家</b>。賣出權利金，讓機率為你工作。</div>
-    <div class="grid grid-2">
-      <a class="card featured" href="https://hedgewizs.github.io/optionswizard/">
-        <div class="icon">📈</div>
-        <h3>OptionsWizard</h3>
-        <p>完整攻略：選擇權基礎、希臘字母、機械化權利金賣出策略。期貨、風險規則、每筆交易背後的數學——20頁，中英雙語，免費。</p>
-        <span class="go">進入 OptionsWizard →</span>
-      </a>
-      <a class="card" href="https://hedgewizs.github.io/optionswizard/futures.html">
-        <div class="icon">📊</div>
-        <h3>期貨基礎</h3>
-        <p>ES、NQ、YM、原油、黃金、白銀——合約規格、跳動值、期貨保證金真相。賣出第一筆權利金之前的基礎。</p>
-        <span class="go">學習期貨 →</span>
-      </a>
-    </div>
-  </div>
-
   <!-- CASINO TAB -->
-  <div class="tab-panel" id="panel-casino" role="tabpanel">
+  <div class="tab-panel active" id="panel-casino" role="tabpanel">
     <div class="thesis">大多數人以<b>玩家</b>身份走進賭場——然後付出莊家優勢。這些實驗室展示真實數學：每種賭注都模擬過，每套系統都測試過，沒有大師廢話。</div>
     <div class="grid grid-2">
       <a class="card" href="https://hedgewizs.github.io/craps-lab/">
@@ -150,24 +133,6 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
   </div>
 
   <!-- CRUISE TAB -->
-  <div class="tab-panel" id="panel-cruise" role="tabpanel">
-    <div class="thesis">賭場招待懂期望值的玩家。我把聰明玩法變成<b>免費郵輪</b>——然後環遊世界、寫下攻略。我親身實踐；網站就是證明。</div>
-    <div class="grid grid-2">
-      <a class="card featured" href="https://hedgewizs.github.io/thecasinocruiser/">
-        <div class="icon">🚢</div>
-        <h3>賭場巡航家</h3>
-        <p>九大郵輪公司航班搜尋、即時天氣港口日規劃、贈禮攻略——賭場玩法如何變成免費郵輪。</p>
-        <span class="go">尋找航班 →</span>
-      </a>
-      <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/ports.html">
-        <div class="icon">🗺️</div>
-        <h3>港口日規劃</h3>
-        <p>30個港口即時天氣與亮點。規劃完美港口日——該做什麼、該跳過什麼、如何準時回船。</p>
-        <span class="go">規劃港口日 →</span>
-      </a>
-    </div>
-  </div>
-
   <!-- HOTEL TAB -->
   <div class="tab-panel" id="panel-hotel" role="tabpanel">
     <div class="coming">
@@ -208,6 +173,7 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <script>
 document.querySelectorAll('.tab-btn').forEach(function(btn){
+  if (btn.classList.contains('tab-link')) return; // direct links, no tab switching
   btn.addEventListener('click', function(){
     document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
     document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });

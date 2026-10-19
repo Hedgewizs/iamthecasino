@@ -36,6 +36,7 @@ a{color:var(--gold)}
 .tab-btn{background:none;border:none;color:var(--muted);font-size:1.05rem;font-weight:700;padding:14px 22px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s}
 .tab-btn:hover{color:var(--text)}
 .tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn.tab-link{text-decoration:none;display:inline-block}
 .tab-panel{display:none}
 .tab-panel.active{display:block;animation:fadeIn .25s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -93,33 +94,14 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <div class="wrap" id="tabs">
   <div class="tabs" role="tablist">
-    <button class="tab-btn active" data-tab="options" role="tab">📈 Options</button>
-    <button class="tab-btn" data-tab="casino" role="tab">🎲 Casino Advantage Plays</button>
-    <button class="tab-btn" data-tab="cruise" role="tab">🚢 Cruise On the House</button>
+    <a class="tab-btn tab-link" href="https://hedgewizs.github.io/optionswizard/">📈 Options</a>
+    <a class="tab-btn tab-link" href="https://hedgewizs.github.io/thecasinocruiser/">🚢 Cruise On the House</a>
+    <button class="tab-btn active" data-tab="casino" role="tab">🎲 Casino Advantage Plays</button>
     <button class="tab-btn" data-tab="hotel" role="tab">🏨 Hotel Best Deal</button>
   </div>
 
-  <!-- OPTIONS TAB -->
-  <div class="tab-panel active" id="panel-options" role="tabpanel">
-    <div class="thesis">Most traders buy options as the <b>gambler</b> — and pay time decay. I do it the other way around: <b>be the house</b>. Sell the premium. Let probability do the work.</div>
-    <div class="grid grid-2">
-      <a class="card featured" href="https://hedgewizs.github.io/optionswizard/">
-        <div class="icon">📈</div>
-        <h3>OptionsWizard</h3>
-        <p>The full playbook: options basics, the Greeks, and mechanical premium-selling strategies. Futures, risk rules, and the math behind every trade — 20 pages, bilingual, free.</p>
-        <span class="go">Enter OptionsWizard →</span>
-      </a>
-      <a class="card" href="https://hedgewizs.github.io/optionswizard/futures.html">
-        <div class="icon">📊</div>
-        <h3>Futures Basics</h3>
-        <p>ES, NQ, YM, crude, gold, silver — contract specs, tick values, and how futures margin actually works. The foundation before you sell a single premium.</p>
-        <span class="go">Learn futures →</span>
-      </a>
-    </div>
-  </div>
-
   <!-- CASINO TAB -->
-  <div class="tab-panel" id="panel-casino" role="tabpanel">
+  <div class="tab-panel active" id="panel-casino" role="tabpanel">
     <div class="thesis">Most people walk into the casino as the <b>player</b> — and pay the house edge. These labs show you the real math: every bet simulated, every system tested, no guru nonsense.</div>
     <div class="grid grid-2">
       <a class="card" href="https://hedgewizs.github.io/craps-lab/">
@@ -145,25 +127,6 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
         <h3>Blackjack Lab</h3>
         <p>Six rule variants, six side bets, and a full card-counting course — Hi-Lo, KO, Omega II, bet sizing, and camouflage. Counting is legal; getting barred isn't.</p>
         <span class="go">Enter the Lab →</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- CRUISE TAB -->
-  <div class="tab-panel" id="panel-cruise" role="tabpanel">
-    <div class="thesis">Casinos comp players who understand expected value. I turn smart play into <b>free cruises</b> — then sail the world and write the playbook. I live this; the site proves it.</div>
-    <div class="grid grid-2">
-      <a class="card featured" href="https://hedgewizs.github.io/thecasinocruiser/">
-        <div class="icon">🚢</div>
-        <h3>The Casino Cruiser</h3>
-        <p>Sailing finder across 9 cruise lines, port-day planners with live weather, and the comp playbook — how casino play turns into free cruises.</p>
-        <span class="go">Find your sailing →</span>
-      </a>
-      <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/ports.html">
-        <div class="icon">🗺️</div>
-        <h3>Port Day Planner</h3>
-        <p>30 ports with live weather and highlights. Plan the perfect port day — what to do, what to skip, and how to get back to the ship on time.</p>
-        <span class="go">Plan a port day →</span>
       </a>
     </div>
   </div>
@@ -208,6 +171,7 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <script>
 document.querySelectorAll('.tab-btn').forEach(function(btn){
+  if (btn.classList.contains('tab-link')) return; // direct links, no tab switching
   btn.addEventListener('click', function(){
     document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
     document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
