@@ -55,6 +55,15 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;text-alig
 footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.75}
 .affil-note{font-size:.82rem;color:var(--muted);margin-top:20px}
 @media(max-width:640px){.hero h1{font-size:2.1rem}.btn-ghost{margin-left:0;margin-top:12px}}
+
+/* Logo twinkle animation */
+.hero .chip img{animation:logoTwinkle 4s ease-in-out infinite}
+@keyframes logoTwinkle{
+  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
+  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
+}
+.nav .brand img{transition:transform .2s ease}
+.nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
 </style>
 </head>
 <body>
@@ -67,7 +76,7 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <header class="hero">
   <div class="wrap">
-    <div class="chip">🎰</div>
+    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo" style="width:280px;max-width:70vw;border-radius:24px;box-shadow:0 8px 40px rgba(0,0,0,.5)"></div>
     <h1>我是<span class="gold">賭場</span></h1>
     <p class="tagline">賣出裸賣權就像開賭場——你成為莊家。學會數學，收取權利金，靠賭場贈禮免費遊輪。</p>
     <div class="thesis">大多數人走進賭場當<b>賭客</b>——乖乖繳莊家優勢。大多數交易者買選擇權當<b>賭徒</b>——乖乖繳時間價值。我反其道而行：<b>成為莊家</b>。賣出權利金，讓機率替你工作。</div>

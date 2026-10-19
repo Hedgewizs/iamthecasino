@@ -55,19 +55,28 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;text-alig
 footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.75}
 .affil-note{font-size:.82rem;color:var(--muted);margin-top:20px}
 @media(max-width:640px){.hero h1{font-size:2.1rem}.btn-ghost{margin-left:0;margin-top:12px}}
+
+/* Logo twinkle animation */
+.hero .chip img{animation:logoTwinkle 4s ease-in-out infinite}
+@keyframes logoTwinkle{
+  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
+  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
+}
+.nav .brand img{transition:transform .2s ease}
+.nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="nav">
-    <a class="brand" href="/">🎰 <span>I Am The Casino</span></a>
+    <a class="brand" href="/"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino" style="height:44px;vertical-align:middle;border-radius:50%"></a>
     <div class="lang-switch"><a href="/" class="active">EN</a><a href="/tw/">中</a></div>
   </nav>
 </div>
 
 <header class="hero">
   <div class="wrap">
-    <div class="chip">🎰</div>
+    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo" style="width:280px;max-width:70vw;border-radius:24px;box-shadow:0 8px 40px rgba(0,0,0,.5)"></div>
     <h1>I Am <span class="gold">The Casino</span></h1>
     <p class="tagline">Selling naked options is like opening a casino — you become the house. Learn the math, collect the premium, cruise on comps.</p>
     <div class="thesis">Most people walk into the casino as the <b>player</b> — and pay the house edge. Most traders buy options as the <b>gambler</b> — and pay time decay. I do it the other way around: <b>be the house</b>. Sell the premium. Let probability do the work.</div>
