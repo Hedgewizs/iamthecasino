@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>I Am The Casino — 成為莊家</title>
-<meta name="description" content="賣出裸賣權就像開賭場。I Am The Casino：誠實的賭場數學、賭場贈禮郵輪攻略、機械化選擇權收入——學會成為莊家。">
+<title>iamthecasino.com — 成為莊家</title>
+<meta name="description" content="成為莊家。選擇權收入、賭場優勢玩法、贈禮郵輪、飯店優惠——誠實的數學，沒有大師廢話。">
 <style>
 :root{
   --bg:#0b0e14; --bg2:#0f1420; --card:#131926; --line:#232c40;
@@ -18,33 +18,48 @@ a{color:var(--gold)}
 /* nav */
 .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
 .nav .brand{font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
-.nav .brand span{color:var(--gold)}
 .lang-switch a{padding:6px 12px;color:var(--muted);text-decoration:none;border-radius:8px}
 .lang-switch a.active{color:var(--gold);border:1px solid var(--gold)}
 /* hero */
-.hero{text-align:center;padding:72px 0 48px}
-.hero .chip{font-size:4rem;margin-bottom:12px}
-.hero h1{font-size:3rem;line-height:1.15;margin-bottom:12px}
+.hero{text-align:center;padding:56px 0 36px}
+.hero .chip{margin-bottom:12px}
+.hero .chip img{width:220px;max-width:60vw;border-radius:50%;animation:logoTwinkle 4s ease-in-out infinite}
+@keyframes logoTwinkle{
+  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
+  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
+}
+.hero h1{font-size:2.6rem;line-height:1.15;margin-bottom:12px}
 .hero h1 .gold{color:var(--gold)}
-.hero .tagline{font-size:1.25rem;color:var(--muted);max-width:640px;margin:0 auto 28px}
-.hero .thesis{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:18px 24px;max-width:640px;margin:0 auto 32px;text-align:left;font-size:1.05rem}
+.hero .tagline{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 28px}
 .btn{display:inline-block;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .08s ease}
 .btn:hover{transform:translateY(-1px);text-decoration:none}
 .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1206}
 .btn-ghost{border:1px solid var(--line);color:var(--text);background:var(--card);margin-left:12px}
+/* tabs */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 32px;border-bottom:1px solid var(--line);padding-bottom:0}
+.tab-btn{background:none;border:none;color:var(--muted);font-size:1.05rem;font-weight:700;padding:14px 22px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 /* sections */
-section.block{padding:48px 0}
+section.block{padding:32px 0}
 section.block h2{font-size:1.8rem;margin-bottom:6px}
 section.block h2 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);margin-right:10px}
 .section-sub{color:var(--muted);margin-bottom:28px;max-width:700px}
 .grid{display:grid;gap:20px}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);display:block;transition:transform .1s ease,border-color .1s ease}
 a.card:hover{transform:translateY(-3px);border-color:var(--gold)}
 .card .icon{font-size:2.5rem;margin-bottom:12px}
 .card h3{font-size:1.3rem;margin-bottom:8px;color:var(--gold)}
 .card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
 .card .go{color:var(--gold);font-weight:700}
+.card.featured{border:2px solid var(--gold);position:relative}
+.card.featured::before{content:"從這開始";position:absolute;top:-13px;left:24px;background:var(--gold);color:#1a1206;font-size:.72rem;font-weight:800;padding:3px 12px;border-radius:20px;letter-spacing:.08em}
+.thesis{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:18px 24px;max-width:700px;margin:0 auto 28px;font-size:1.02rem}
 /* newsletter */
 .newsletter{background:linear-gradient(135deg,#f5b942,#e8930c);border-radius:var(--radius);padding:40px;text-align:center;color:#1a1206;margin:24px 0}
 .newsletter h2{color:#1a1206;margin-bottom:8px}
@@ -54,14 +69,9 @@ a.card:hover{transform:translateY(-3px);border-color:var(--gold)}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;text-align:center;color:var(--muted);font-size:.88rem}
 footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.75}
 .affil-note{font-size:.82rem;color:var(--muted);margin-top:20px}
-@media(max-width:640px){.hero h1{font-size:2.1rem}.btn-ghost{margin-left:0;margin-top:12px}}
-
-/* Logo twinkle animation */
-.hero .chip img{animation:logoTwinkle 4s ease-in-out infinite}
-@keyframes logoTwinkle{
-  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
-  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
-}
+.coming{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 28px;text-align:center;color:var(--muted)}
+.coming h3{color:var(--gold);margin-bottom:8px}
+@media(max-width:640px){.hero h1{font-size:2rem}.btn-ghost{margin-left:0;margin-top:12px}.tab-btn{padding:12px 14px;font-size:.95rem}}
 .nav .brand img{transition:transform .2s ease}
 .nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
 </style>
@@ -69,59 +79,112 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 <body>
 <div class="wrap">
   <nav class="nav">
-    <a class="brand" href="/tw/">🎰 <span>我是賭場</span></a>
+    <a class="brand" href="/"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino" style="height:44px;vertical-align:middle;border-radius:50%"></a>
     <div class="lang-switch"><a href="/">EN</a><a href="/tw/" class="active">中</a></div>
   </nav>
 </div>
 
 <header class="hero">
   <div class="wrap">
-    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo" style="width:280px;max-width:70vw;border-radius:50%"></div>
-    <h1>我是<span class="gold">賭場</span></h1>
-    <p class="tagline">賣出裸賣權就像開賭場——你成為莊家。學會數學，收取權利金，靠賭場贈禮免費遊輪。</p>
-    <div class="thesis">大多數人走進賭場當<b>賭客</b>——乖乖繳莊家優勢。大多數交易者買選擇權當<b>賭徒</b>——乖乖繳時間價值。我反其道而行：<b>成為莊家</b>。賣出權利金，讓機率替你工作。</div>
-    <a class="btn btn-primary" href="#start">從這裡開始</a>
+    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo"></div>
+    <h1>我就是<span class="gold">賭場</span></h1>
+    <p class="tagline">賣出裸賣權就像開賭場——你成為莊家。學會數學，收取權利金，搭贈禮郵輪。</p>
+    <a class="btn btn-primary" href="#tabs">開始探索</a>
     <a class="btn btn-ghost" href="#newsletter">訂閱電子報</a>
   </div>
 </header>
 
-<div class="wrap">
-<section class="block" id="start">
-  <h2><span class="dot"></span>旗下網站</h2>
-  <p class="section-sub">四個實驗室，一種哲學。每個網站都免費、雙語、建立在誠實的數學上——沒有秘密必勝法，沒有大師話術。</p>
-  <div class="grid grid-3">
-    <a class="card" href="https://hedgewizs.github.io/optionswizard/">
-      <div class="icon">📈</div>
-      <h3>OptionsWizard</h3>
-      <p>Mechanical premium-selling: the strategies, the Greeks, the risk rules. Trade like the house — collect theta, manage like a casino manages risk.</p>
-      <span class="go">Enter the Lab →</span>
-    </a>
-    <a class="card" href="https://hedgewizs.github.io/craps-lab/">
-      <div class="icon">🎲</div>
-      <h3>Craps Lab</h3>
-      <p>每種花旗骰注，模擬十萬次。策略預設、荷官訓練、賠付練習。拿起籌碼前先搞懂優勢。</p>
-      <span class="go">進入實驗室 →</span>
-    </a>
-    <a class="card" href="https://hedgewizs.github.io/baccarat-lab/">
-      <div class="icon">🃏</div>
-      <h3>Baccarat Lab</h3>
-      <p>完整八副牌模擬器、五種路單、邊注算牌數學。關於玩家真正在用的每個系統，說誠實話。</p>
-      <span class="go">進入實驗室 →</span>
-    </a>
-    
-    <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/">
-      <div class="icon">🚢</div>
-      <h3>The Casino Cruiser</h3>
-      <p>郵輪搜尋、港口日規劃、賭場贈禮攻略——賭場投注如何變成免費郵輪。我親身實踐，網站為證。</p>
-      <span class="go">找你的航程 →</span>
-    </a>
+<div class="wrap" id="tabs">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="options" role="tab">📈 選擇權</button>
+    <button class="tab-btn" data-tab="casino" role="tab">🎲 賭場優勢玩法</button>
+    <button class="tab-btn" data-tab="cruise" role="tab">🚢 贈禮郵輪</button>
+    <button class="tab-btn" data-tab="hotel" role="tab">🏨 飯店優惠</button>
   </div>
-</section>
 
+  <!-- OPTIONS TAB -->
+  <div class="tab-panel active" id="panel-options" role="tabpanel">
+    <div class="thesis">大多數交易者像<b>賭徒</b>一樣買入選擇權——然後付出時間價值。我反其道而行：<b>成為莊家</b>。賣出權利金，讓機率為你工作。</div>
+    <div class="grid grid-2">
+      <a class="card featured" href="https://hedgewizs.github.io/optionswizard/">
+        <div class="icon">📈</div>
+        <h3>OptionsWizard</h3>
+        <p>完整攻略：選擇權基礎、希臘字母、機械化權利金賣出策略。期貨、風險規則、每筆交易背後的數學——20頁，中英雙語，免費。</p>
+        <span class="go">進入 OptionsWizard →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/optionswizard/futures.html">
+        <div class="icon">📊</div>
+        <h3>期貨基礎</h3>
+        <p>ES、NQ、YM、原油、黃金、白銀——合約規格、跳動值、期貨保證金真相。賣出第一筆權利金之前的基礎。</p>
+        <span class="go">學習期貨 →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CASINO TAB -->
+  <div class="tab-panel" id="panel-casino" role="tabpanel">
+    <div class="thesis">大多數人以<b>玩家</b>身份走進賭場——然後付出莊家優勢。這些實驗室展示真實數學：每種賭注都模擬過，每套系統都測試過，沒有大師廢話。</div>
+    <div class="grid grid-2">
+      <a class="card" href="https://hedgewizs.github.io/craps-lab/">
+        <div class="icon">🎲</div>
+        <h3>Craps Lab</h3>
+        <p>每種骰寶賭注模擬十萬次。策略預設、荷官訓練、賠付練習、優勢玩法指南。摸籌碼之前先懂優勢。</p>
+        <span class="go">進入實驗室 →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/baccarat-lab/">
+        <div class="icon">🃏</div>
+        <h3>Baccarat Lab</h3>
+        <p>完整八副牌模擬器，五種路單，邊注算牌與公開觸發點。關於玩家實際使用的每套系統的誠實真相。</p>
+        <span class="go">進入實驗室 →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/roulette-lab/">
+        <div class="icon">🎡</div>
+        <h3>Roulette Lab</h3>
+        <p>歐式、美式、三零輪盤。誠實測試投注法，法式注碼，以及為什麼輪盤天生最難戰勝。</p>
+        <span class="go">進入實驗室 →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/blackjack-lab/">
+        <div class="icon">♠️</div>
+        <h3>Blackjack Lab</h3>
+        <p>六種規則變體、六種邊注、完整算牌課程——Hi-Lo、KO、Omega II、注碼管理、偽裝。算牌合法；被趕出去另當別論。</p>
+        <span class="go">進入實驗室 →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CRUISE TAB -->
+  <div class="tab-panel" id="panel-cruise" role="tabpanel">
+    <div class="thesis">賭場招待懂期望值的玩家。我把聰明玩法變成<b>免費郵輪</b>——然後環遊世界、寫下攻略。我親身實踐；網站就是證明。</div>
+    <div class="grid grid-2">
+      <a class="card featured" href="https://hedgewizs.github.io/thecasinocruiser/">
+        <div class="icon">🚢</div>
+        <h3>賭場巡航家</h3>
+        <p>九大郵輪公司航班搜尋、即時天氣港口日規劃、贈禮攻略——賭場玩法如何變成免費郵輪。</p>
+        <span class="go">尋找航班 →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/ports.html">
+        <div class="icon">🗺️</div>
+        <h3>港口日規劃</h3>
+        <p>30個港口即時天氣與亮點。規劃完美港口日——該做什麼、該跳過什麼、如何準時回船。</p>
+        <span class="go">規劃港口日 →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- HOTEL TAB -->
+  <div class="tab-panel" id="panel-hotel" role="tabpanel">
+    <div class="coming">
+      <h3>🏨 飯店優惠 — coming soon</h3>
+      <p>點數、會籍匹配、把賭場與郵輪旅行變成近乎免費飯店住宿的技巧。<br>訂閱下方電子報，第一時間知道。</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
 <section class="block" id="newsletter">
   <div class="newsletter">
-    <h2>📬 成為莊家——電子報</h2>
-    <p>每週：一筆附數學的選擇權交易想法、一個賭場真相、一個贈禮郵輪優惠。永久免費，隨時退訂。</p>
+    <h2>📬 iamthecasino.com——電子報</h2>
+    <p>每週：一筆有數學的選擇權交易想法、一個賭場真相、一個贈禮郵輪優惠。永遠免費，隨時退訂。</p>
     <div class="sub-embed">
       <iframe src="https://iamthecasinocombethehouse.substack.com/embed" width="480" height="320" style="border:1px solid #EEE;background:#fff;max-width:100%;border-radius:8px" frameborder="0" scrolling="no" title="Subscribe to iamthecasino.com"></iframe>
     </div>
@@ -130,21 +193,38 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <section class="block">
   <h2><span class="dot"></span>核心理念</h2>
-  <p class="section-sub">三條規則，處處適用——花旗骰桌上、選擇權市場裡、郵輪甲板上。</p>
+  <p class="section-sub">三條規則，處處適用——骰寶桌上、選擇權市場、郵輪上。</p>
   <div class="grid grid-3">
-    <div class="card"><div class="icon">🏦</div><h3>1. 成為莊家</h3><p class="muted">賭場不賭博——它收取微小優勢，成千上萬次，配上鐵腕風控。賣選擇權也一樣：權利金入袋、機率站在你這邊、部位小到單次虧損無關痛癢。</p></div>
-    <div class="card"><div class="icon">🔢</div><h3>2. 搞懂數學</h3><p class="muted">每注都有價格，每個選擇權都有公允價值。說不出優勢在哪，你就是桌上那個冤大頭。四個實驗室的存在，就是讓數學看得見。</p></div>
-    <div class="card"><div class="icon">🎰</div><h3>3. 玩樂有人買單</h3><p class="muted">賭場贈禮給懂期望值的玩家。郵輪公司、信用卡、券商——這個系統獎勵交易量。玩得聰明，贈禮就替你的生活買單。</p></div>
+    <div class="card"><div class="icon">🏦</div><h3>1. 成為莊家</h3><p>莊家不賭博——它用鐵的風險控制，收取微小優勢，成千上萬次。賣選擇權也一樣：收進權利金，機率站在你這邊，注碼小到單次虧損無關痛癢。</p></div>
+    <div class="card"><div class="icon">🔢</div><h3>2. 懂數學</h3><p>每種賭注都有價格。每個選擇權都有公允價值。說不出優勢在哪，你就是桌上的肥羊。四個實驗室的存在就是讓數學看得見。</p></div>
+    <div class="card"><div class="icon">🎰</div><h3>3. 玩還能賺</h3><p>賭場招待懂期望值的玩家。郵輪公司、信用卡、券商——體制獎勵交易量。玩得聰明，招待付你的生活費。</p></div>
   </div>
-  <p class="affil-note">聯盟行銷揭露：本站部分連結為 Amazon 聯盟連結。身為 Amazon 合作夥伴，我從合格購買中賺取佣金——你不花一毛錢，實驗室保持免費。</p>
+  <p class="affil-note">Affiliate disclosure: some links on this page are Amazon affiliate links. As an Amazon Associate I earn from qualifying purchases — it costs you nothing and keeps the labs free.</p>
 </section>
 </div>
 
 <footer>
   <div class="wrap">
-    <div class="disclaimer"><strong>免責聲明：</strong>僅為教育內容，非財務建議。選擇權交易有重大虧損風險。賭場遊戲的莊家優勢固定不變，無系統可勝。請量力而為、理性玩樂交易。</div>
-    <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">賭場巡遊者</a> · Tim 製作</p>
+    <div class="disclaimer"><strong>Disclaimer:</strong> Educational content only — not financial advice. Options trading involves substantial risk of loss. Casino games have a fixed house edge no system overcomes. Play and trade responsibly, within your means.</div>
+    <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">賭場巡航家</a></p>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.getAttribute('data-tab')).classList.add('active');
+  });
+});
+// Deep-link tabs via hash: #tab-casino etc.
+(function(){
+  var h = location.hash.replace('#tab-','');
+  var btn = document.querySelector('.tab-btn[data-tab="'+h+'"]');
+  if(btn){ btn.click(); }
+})();
+</script>
 </body>
 </html>

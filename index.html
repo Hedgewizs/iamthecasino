@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iamthecasino.com</title>
-<meta name="description" content="Selling options is like opening a casino. I Am The Casino: honest casino math, comp cruise playbooks, and mechanical options income — learn to be the house.">
+<meta name="description" content="Be the house. Options income, casino advantage play, comp cruises, and hotel deals — honest math, no guru nonsense.">
 <style>
 :root{
   --bg:#0b0e14; --bg2:#0f1420; --card:#131926; --line:#232c40;
@@ -18,33 +18,48 @@ a{color:var(--gold)}
 /* nav */
 .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
 .nav .brand{font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
-.nav .brand span{color:var(--gold)}
 .lang-switch a{padding:6px 12px;color:var(--muted);text-decoration:none;border-radius:8px}
 .lang-switch a.active{color:var(--gold);border:1px solid var(--gold)}
 /* hero */
-.hero{text-align:center;padding:72px 0 48px}
-.hero .chip{font-size:4rem;margin-bottom:12px}
-.hero h1{font-size:3rem;line-height:1.15;margin-bottom:12px}
+.hero{text-align:center;padding:56px 0 36px}
+.hero .chip{margin-bottom:12px}
+.hero .chip img{width:220px;max-width:60vw;border-radius:50%;animation:logoTwinkle 4s ease-in-out infinite}
+@keyframes logoTwinkle{
+  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
+  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
+}
+.hero h1{font-size:2.6rem;line-height:1.15;margin-bottom:12px}
 .hero h1 .gold{color:var(--gold)}
-.hero .tagline{font-size:1.25rem;color:var(--muted);max-width:640px;margin:0 auto 28px}
-.hero .thesis{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:18px 24px;max-width:640px;margin:0 auto 32px;text-align:left;font-size:1.05rem}
+.hero .tagline{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 28px}
 .btn{display:inline-block;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .08s ease}
 .btn:hover{transform:translateY(-1px);text-decoration:none}
 .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1206}
 .btn-ghost{border:1px solid var(--line);color:var(--text);background:var(--card);margin-left:12px}
+/* tabs */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 32px;border-bottom:1px solid var(--line);padding-bottom:0}
+.tab-btn{background:none;border:none;color:var(--muted);font-size:1.05rem;font-weight:700;padding:14px 22px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 /* sections */
-section.block{padding:48px 0}
+section.block{padding:32px 0}
 section.block h2{font-size:1.8rem;margin-bottom:6px}
 section.block h2 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);margin-right:10px}
 .section-sub{color:var(--muted);margin-bottom:28px;max-width:700px}
 .grid{display:grid;gap:20px}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);display:block;transition:transform .1s ease,border-color .1s ease}
 a.card:hover{transform:translateY(-3px);border-color:var(--gold)}
 .card .icon{font-size:2.5rem;margin-bottom:12px}
 .card h3{font-size:1.3rem;margin-bottom:8px;color:var(--gold)}
 .card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
 .card .go{color:var(--gold);font-weight:700}
+.card.featured{border:2px solid var(--gold);position:relative}
+.card.featured::before{content:"START HERE";position:absolute;top:-13px;left:24px;background:var(--gold);color:#1a1206;font-size:.72rem;font-weight:800;padding:3px 12px;border-radius:20px;letter-spacing:.08em}
+.thesis{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:18px 24px;max-width:700px;margin:0 auto 28px;font-size:1.02rem}
 /* newsletter */
 .newsletter{background:linear-gradient(135deg,#f5b942,#e8930c);border-radius:var(--radius);padding:40px;text-align:center;color:#1a1206;margin:24px 0}
 .newsletter h2{color:#1a1206;margin-bottom:8px}
@@ -54,14 +69,9 @@ a.card:hover{transform:translateY(-3px);border-color:var(--gold)}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;text-align:center;color:var(--muted);font-size:.88rem}
 footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.75}
 .affil-note{font-size:.82rem;color:var(--muted);margin-top:20px}
-@media(max-width:640px){.hero h1{font-size:2.1rem}.btn-ghost{margin-left:0;margin-top:12px}}
-
-/* Logo twinkle animation */
-.hero .chip img{animation:logoTwinkle 4s ease-in-out infinite}
-@keyframes logoTwinkle{
-  0%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(245,185,66,0))}
-  50%{filter:brightness(1.08) drop-shadow(0 0 24px rgba(245,185,66,.45))}
-}
+.coming{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 28px;text-align:center;color:var(--muted)}
+.coming h3{color:var(--gold);margin-bottom:8px}
+@media(max-width:640px){.hero h1{font-size:2rem}.btn-ghost{margin-left:0;margin-top:12px}.tab-btn{padding:12px 14px;font-size:.95rem}}
 .nav .brand img{transition:transform .2s ease}
 .nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
 </style>
@@ -76,48 +86,101 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 
 <header class="hero">
   <div class="wrap">
-    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo" style="width:280px;max-width:70vw;border-radius:50%"></div>
+    <div class="chip"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino logo"></div>
     <h1>I Am <span class="gold">The Casino</span></h1>
     <p class="tagline">Selling naked options is like opening a casino — you become the house. Learn the math, collect the premium, cruise on comps.</p>
-    <div class="thesis">Most people walk into the casino as the <b>player</b> — and pay the house edge. Most traders buy options as the <b>gambler</b> — and pay time decay. I do it the other way around: <b>be the house</b>. Sell the premium. Let probability do the work.</div>
-    <a class="btn btn-primary" href="#start">Start here</a>
+    <a class="btn btn-primary" href="#tabs">Explore</a>
     <a class="btn btn-ghost" href="#newsletter">Get the letter</a>
   </div>
 </header>
 
-<div class="wrap">
-<section class="block" id="start">
-  <h2><span class="dot"></span>The Properties</h2>
-  <p class="section-sub">Four labs, one philosophy. Every site is free, bilingual, and built on honest math — no secret systems, no guru nonsense.</p>
-  <div class="grid grid-3">
-    <a class="card" href="https://hedgewizs.github.io/optionswizard/">
-      <div class="icon">📈</div>
-      <h3>OptionsWizard</h3>
-      <p>Mechanical premium-selling: the strategies, the Greeks, the risk rules. Trade like the house — collect theta, manage like a casino manages risk.</p>
-      <span class="go">Enter the Lab →</span>
-    </a>
-    <a class="card" href="https://hedgewizs.github.io/craps-lab/">
-      <div class="icon">🎲</div>
-      <h3>Craps Lab</h3>
-      <p>Every craps bet, simulated 100,000 times. Strategy presets, dealer training, payout drills. Know the edge before you touch a chip.</p>
-      <span class="go">Enter the Lab →</span>
-    </a>
-    <a class="card" href="https://hedgewizs.github.io/baccarat-lab/">
-      <div class="icon">🃏</div>
-      <h3>Baccarat Lab</h3>
-      <p>Full 8-deck simulator, all five scoreboards, side-bet card counting math. The honest truth about every system players actually use.</p>
-      <span class="go">Enter the Lab →</span>
-    </a>
-    
-    <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/">
-      <div class="icon">🚢</div>
-      <h3>The Casino Cruiser</h3>
-      <p>Cruise finder, port-day planners, and the comp playbook — how casino play turns into free cruises. I live this; the site proves it.</p>
-      <span class="go">Find your sailing →</span>
-    </a>
+<div class="wrap" id="tabs">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="options" role="tab">📈 Options</button>
+    <button class="tab-btn" data-tab="casino" role="tab">🎲 Casino Advantage Plays</button>
+    <button class="tab-btn" data-tab="cruise" role="tab">🚢 Cruise On the House</button>
+    <button class="tab-btn" data-tab="hotel" role="tab">🏨 Hotel Best Deal</button>
   </div>
-</section>
 
+  <!-- OPTIONS TAB -->
+  <div class="tab-panel active" id="panel-options" role="tabpanel">
+    <div class="thesis">Most traders buy options as the <b>gambler</b> — and pay time decay. I do it the other way around: <b>be the house</b>. Sell the premium. Let probability do the work.</div>
+    <div class="grid grid-2">
+      <a class="card featured" href="https://hedgewizs.github.io/optionswizard/">
+        <div class="icon">📈</div>
+        <h3>OptionsWizard</h3>
+        <p>The full playbook: options basics, the Greeks, and mechanical premium-selling strategies. Futures, risk rules, and the math behind every trade — 20 pages, bilingual, free.</p>
+        <span class="go">Enter OptionsWizard →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/optionswizard/futures.html">
+        <div class="icon">📊</div>
+        <h3>Futures Basics</h3>
+        <p>ES, NQ, YM, crude, gold, silver — contract specs, tick values, and how futures margin actually works. The foundation before you sell a single premium.</p>
+        <span class="go">Learn futures →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CASINO TAB -->
+  <div class="tab-panel" id="panel-casino" role="tabpanel">
+    <div class="thesis">Most people walk into the casino as the <b>player</b> — and pay the house edge. These labs show you the real math: every bet simulated, every system tested, no guru nonsense.</div>
+    <div class="grid grid-2">
+      <a class="card" href="https://hedgewizs.github.io/craps-lab/">
+        <div class="icon">🎲</div>
+        <h3>Craps Lab</h3>
+        <p>Every craps bet simulated 100,000 times. Strategy presets, dealer training, payout drills, advantage-play guide. Know the edge before you touch a chip.</p>
+        <span class="go">Enter the Lab →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/baccarat-lab/">
+        <div class="icon">🃏</div>
+        <h3>Baccarat Lab</h3>
+        <p>Full 8-deck simulator, all five scoreboards, side-bet card counting with published triggers. The honest truth about every system players actually use.</p>
+        <span class="go">Enter the Lab →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/roulette-lab/">
+        <div class="icon">🎡</div>
+        <h3>Roulette Lab</h3>
+        <p>European, American, and triple-zero wheels. Betting methods tested honestly, French call bets, and why roulette is the least beatable game by design.</p>
+        <span class="go">Enter the Lab →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/blackjack-lab/">
+        <div class="icon">♠️</div>
+        <h3>Blackjack Lab</h3>
+        <p>Six rule variants, six side bets, and a full card-counting course — Hi-Lo, KO, Omega II, bet sizing, and camouflage. Counting is legal; getting barred isn't.</p>
+        <span class="go">Enter the Lab →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CRUISE TAB -->
+  <div class="tab-panel" id="panel-cruise" role="tabpanel">
+    <div class="thesis">Casinos comp players who understand expected value. I turn smart play into <b>free cruises</b> — then sail the world and write the playbook. I live this; the site proves it.</div>
+    <div class="grid grid-2">
+      <a class="card featured" href="https://hedgewizs.github.io/thecasinocruiser/">
+        <div class="icon">🚢</div>
+        <h3>The Casino Cruiser</h3>
+        <p>Sailing finder across 9 cruise lines, port-day planners with live weather, and the comp playbook — how casino play turns into free cruises.</p>
+        <span class="go">Find your sailing →</span>
+      </a>
+      <a class="card" href="https://hedgewizs.github.io/thecasinocruiser/ports.html">
+        <div class="icon">🗺️</div>
+        <h3>Port Day Planner</h3>
+        <p>30 ports with live weather and highlights. Plan the perfect port day — what to do, what to skip, and how to get back to the ship on time.</p>
+        <span class="go">Plan a port day →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- HOTEL TAB -->
+  <div class="tab-panel" id="panel-hotel" role="tabpanel">
+    <div class="coming">
+      <h3>🏨 Hotel Best Deal — coming soon</h3>
+      <p>Points, status matches, and the tricks that turn casino and cruise travel into nearly-free hotel nights.<br>Join the letter below and you'll hear about it first.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
 <section class="block" id="newsletter">
   <div class="newsletter">
     <h2>📬 iamthecasino.com — the letter</h2>
@@ -132,9 +195,9 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
   <h2><span class="dot"></span>The Doctrine</h2>
   <p class="section-sub">Three rules, applied everywhere — at the craps table, in the options market, on the cruise ship.</p>
   <div class="grid grid-3">
-    <div class="card"><div class="icon">🏦</div><h3>1. Be the house</h3><p class="muted">The house doesn't gamble — it collects a small edge, thousands of times, with iron risk control. Sell options the same way: premium in, probability on your side, size so no single loss matters.</p></div>
-    <div class="card"><div class="icon">🔢</div><h3>2. Know the math</h3><p class="muted">Every bet has a price. Every option has a fair value. If you can't state the edge, you're the sucker at the table. All four labs exist to make the math visible.</p></div>
-    <div class="card"><div class="icon">🎰</div><h3>3. Get paid to play</h3><p class="muted">Casinos comp players who understand expected value. Cruise lines, credit cards, brokerages — the system rewards volume. Play smart, and the comps pay for the lifestyle.</p></div>
+    <div class="card"><div class="icon">🏦</div><h3>1. Be the house</h3><p>The house doesn't gamble — it collects a small edge, thousands of times, with iron risk control. Sell options the same way: premium in, probability on your side, size so no single loss matters.</p></div>
+    <div class="card"><div class="icon">🔢</div><h3>2. Know the math</h3><p>Every bet has a price. Every option has a fair value. If you can't state the edge, you're the sucker at the table. All four labs exist to make the math visible.</p></div>
+    <div class="card"><div class="icon">🎰</div><h3>3. Get paid to play</h3><p>Casinos comp players who understand expected value. Cruise lines, credit cards, brokerages — the system rewards volume. Play smart, and the comps pay for the lifestyle.</p></div>
   </div>
   <p class="affil-note">Affiliate disclosure: some links on this page are Amazon affiliate links. As an Amazon Associate I earn from qualifying purchases — it costs you nothing and keeps the labs free.</p>
 </section>
@@ -143,8 +206,25 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 <footer>
   <div class="wrap">
     <div class="disclaimer"><strong>Disclaimer:</strong> Educational content only — not financial advice. Options trading involves substantial risk of loss. Casino games have a fixed house edge no system overcomes. Play and trade responsibly, within your means.</div>
-    <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">The Casino Cruiser</a> · Built by Tim</p>
+    <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">The Casino Cruiser</a></p>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.getAttribute('data-tab')).classList.add('active');
+  });
+});
+// Deep-link tabs via hash: #tab-casino etc.
+(function(){
+  var h = location.hash.replace('#tab-','');
+  var btn = document.querySelector('.tab-btn[data-tab="'+h+'"]');
+  if(btn){ btn.click(); }
+})();
+</script>
 </body>
 </html>
