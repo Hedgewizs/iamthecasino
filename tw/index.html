@@ -77,7 +77,20 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 .affil-note{font-size:.82rem;color:var(--muted);margin-top:20px}
 .coming{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 28px;text-align:center;color:var(--muted)}
 .coming h3{color:var(--gold);margin-bottom:8px}
-@media(max-width:640px){.hero h1{font-size:2rem}.btn-ghost{margin-left:0;margin-top:12px}.tab-btn{padding:12px 14px;font-size:.95rem}}
+@media(max-width:640px){
+  .hero h1{font-size:2rem}
+  .btn-ghost{margin-left:0;margin-top:12px}
+  /* tabs: full-width vertical stack, 48px+ tap targets */
+  .tabs{flex-direction:column;gap:0;align-items:stretch;border-bottom:none}
+  .tab-btn{padding:15px 16px;font-size:1rem;text-align:center;border-bottom:1px solid var(--line);margin-bottom:0}
+  .tab-btn.active{border-bottom-color:var(--gold);background:rgba(245,185,66,.08)}
+  /* cards: force single column on phones */
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .card{padding:24px 20px}
+  /* footer: roomier tap targets */
+  .footer-links a{display:inline-block;padding:10px 12px}
+  .newsletter{padding:32px 20px}
+}
 .nav .brand img{transition:transform .2s ease}
 .nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
 </style>
