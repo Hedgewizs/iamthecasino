@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFRQ2Q21MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HFRQ2Q21MV');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Options Basics: Calls, Puts, and What Premium Really Is — I Am The Casino</title>
+<meta name="description" content="What is a call, what is a put, and what is the premium you pay actually made of? A plain-English guide to the building blocks of options — intrinsic value, time value, and what happens at expiry.">
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#0f1420; --card:#131926; --line:#232c40;
+  --gold:#f5b942; --gold2:#e8930c; --text:#eef1f6; --muted:#98a2b6;
+  --green:#3ddc84; --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+a{color:var(--gold)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.nav .brand{font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:700;padding:6px 12px;border-radius:8px}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a.active{color:var(--gold)}
+.lang-switch a{padding:6px 12px;color:var(--muted);text-decoration:none;border-radius:8px}
+.lang-switch a.active{color:var(--gold);border:1px solid var(--gold)}
+.page{max-width:760px;margin:0 auto;padding:48px 20px 16px}
+.page h1{font-size:2.2rem;line-height:1.2;margin-bottom:8px}
+.page h1 .gold{color:var(--gold)}
+.page h2{font-size:1.35rem;margin:28px 0 10px;color:var(--gold)}
+.page p{margin-bottom:14px;color:var(--text)}
+.page ul{margin:0 0 14px 22px}
+.page li{margin-bottom:6px;color:var(--text)}
+.article .meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.article .back{margin-bottom:16px;font-size:.95rem}
+.article figure{margin:22px 0}
+.article img{max-width:100%;height:auto;border-radius:12px;display:block}
+.article figcaption{color:var(--muted);font-size:.82rem;margin-top:8px}
+.article .note{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:24px 0;font-size:.95rem}
+.article .note p{margin-bottom:0;color:var(--muted)}
+.article .costs{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;margin:22px 0}
+.article .costs h3{color:var(--gold);margin-bottom:10px}
+.article .costs ul{margin-bottom:0}
+.article .costs li{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;text-align:center;color:var(--muted);font-size:.88rem}
+footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.75}
+.footer-links{margin-bottom:14px}
+.nav .brand img{transition:transform .2s ease}
+.nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
+@media(max-width:640px){.footer-links a{display:inline-block;padding:10px 12px}.page{padding-top:32px}.page h1{font-size:1.8rem}}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2871648321226549" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="brand" href="/"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino" style="height:44px;vertical-align:middle;border-radius:50%"></a>
+    <div class="nav-links"><a href="/articles/" class="active">Articles</a></div>
+    <div class="lang-switch"><a href="/" class="active">EN</a><a href="/tw/">中</a></div>
+  </nav>
+</div>
+
+<main class="page article">
+  <p class="back"><a href="/articles/">← Articles</a> · <a href="/articles/#options">Options</a></p>
+  <h1>Options Basics: Calls, Puts, and What Premium Really Is</h1>
+  <p class="meta">November 21, 2026 · By Hedgewiz · Options education</p>
+
+  <p>Options sound complicated. But the core idea is simple: an option is a contract that gives one person the right to buy or sell something at a set price, before a set date — and the other person gets paid to take the other side.</p>
+
+  <h2>What an option actually is</h2>
+
+  <p>An option is a contract tied to an underlying asset, usually a stock or an index. It names four things: the underlying, the strike price, the expiry date, and the premium. One contract normally covers 100 shares.</p>
+
+  <p>The key word is <em>right</em>, not obligation. The buyer pays for the right to do something later, and can let it go unused. The seller, paid up front, takes on the obligation to honour the deal if the buyer uses it. That asymmetry is the whole game.</p>
+
+  <h2>Calls: the right to buy</h2>
+
+  <p>A call option gives its buyer the right to buy the underlying asset at the strike price before expiry. A call buyer profits when the underlying rises above the strike by more than the premium paid. If the stock never gets above the strike, the call expires worthless, and the buyer loses the premium — no more.</p>
+
+  <p>Think of it like a rain check on a price. If a stock trades at $50 and you hold a call with a $55 strike, you have locked in the right to buy at $55 — worth something only if the stock goes above $55 before expiry. The seller has agreed to sell you those shares at $55 if you ask, even if the market price is $70 by then.</p>
+
+  <h2>Puts: the right to sell</h2>
+
+  <p>A put option is the mirror image. It gives its buyer the right to sell the underlying asset at the strike price before expiry. A put buyer profits when the underlying falls below the strike by more than the premium paid. If the stock stays above the strike, the put expires worthless and the buyer loses the premium.</p>
+
+  <p>Puts are often described as insurance, and the comparison is fair. A shareholder can buy a put as protection: if the stock drops, the put gains value and offsets some of the loss. But puts are also bought on their own by people who expect a decline. Either way, the buyer pays for the right to sell at a fixed price, and the seller gets paid to stand on the other side.</p>
+
+  <h2>Buyer versus seller</h2>
+
+  <p>The buyer and the seller have opposite risk profiles. The buyer pays a known amount — the premium — and that is the most they can lose. Their gain, on a call at least, is open-ended. The seller collects the premium up front, and that is the most they can gain. Their risk is the other side of the coin: if the underlying moves strongly against them, the loss can be far larger than the premium collected. Neither side is simply better — but anyone trading options needs to know which side they are on.</p>
+
+  <h2>What premium is made of</h2>
+
+  <p>Premium is the price of an option, and it is made of two parts: intrinsic value and time value. Intrinsic value is the part already "in the money" — the real, immediate value of exercising right now. A call with a $50 strike on a stock trading at $55 has $5 of intrinsic value. An option not yet in the money has zero intrinsic value, which can never be negative.</p>
+
+  <p>Time value is everything else: the value of the chance that the option could become worth more before expiry. A call with a $60 strike on a $55 stock has no intrinsic value, but it still costs something — because the stock might rise above $60, and that possibility has a price. Time value is highest when expiry is far away and the stock is near the strike, and it shrinks daily as expiry approaches. On the expiry date, time value is zero, and the option is worth exactly its intrinsic value — or nothing.</p>
+
+  <p>Two forces feed time value most: time itself, since more days to expiry means more chances for the stock to move, and volatility, since a stock that swings wildly makes a big move more likely. Premium, in short, is real value plus the price of possibility.</p>
+
+  <h2>What happens at expiry</h2>
+
+  <p>At expiry, there are only a few outcomes. If it is in the money — a call with a strike below the stock price, or a put with a strike above it — it has intrinsic value, and the holder can exercise it, or sell the option itself to collect that value. If it is out of the money, it expires worthless: the buyer loses the premium, the seller keeps it, and the contract ends.</p>
+
+  <p>Most options are closed before expiry rather than exercised. But the expiry outcome anchors the price all along: every day, the market prices the odds the option finishes in the money — and that is what you are paying for, or being paid for, in the premium.</p>
+
+  <div class="note">
+    <p>Options can lose money quickly, and selling options can lose more than the premium collected. Know which side of the contract you are on and your maximum loss before trading. Paper trading first is a sensible step.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer"><strong>Disclaimer:</strong> Educational content only — not financial advice. Options trading involves substantial risk of loss. Casino games have a fixed house edge no system overcomes. Play and trade responsibly, within your means.</div>
+    <p class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a> · <a href="/articles/">Articles</a> · <a href="/contact.html">Contact</a></p>
+    <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">The Casino Cruiser</a></p>
+  </div>
+</footer>
+</body>
+</html>
