@@ -9,13 +9,34 @@
   gtag('config', 'G-HFRQ2Q21MV');
 </script>
 
+<link rel="canonical" href="https://iamthecasino.com/terms.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iamthecasino.com/terms.html">
+<meta property="og:title" content="Terms of Use — I Am The Casino">
+<meta property="og:description" content="Terms of Use for iamthecasino.com.">
+<meta property="og:image" content="https://iamthecasino.com/assets/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://iamthecasino.com/terms.html">
+<meta name="twitter:title" content="Terms of Use — I Am The Casino">
+<meta name="twitter:description" content="Terms of Use for iamthecasino.com.">
+<meta name="twitter:image" content="https://iamthecasino.com/assets/logo.webp">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Use — I Am The Casino</title>
 <meta name="description" content="Terms of Use for iamthecasino.com.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Use — I Am The Casino",
+  "url": "https://iamthecasino.com/terms.html",
+  "description": "Terms of Use for iamthecasino.com."
+}
+</script>
+<link rel="preload" as="image" href="/assets/logo.webp" type="image/webp">
 <style>
 :root{
-  --bg:#0b0e14; --bg2:#0f1420; --card:#131926; --line:#232c40;
+  --bg:#0b0e14; --bg2:#0f1420; --card:#121824; --line:#232c40;
   --gold:#f5b942; --gold2:#e8930c; --text:#eef1f6; --muted:#98a2b6;
   --green:#3ddc84; --radius:14px;
 }
@@ -43,14 +64,20 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
 .footer-links{margin-bottom:14px}
 .nav .brand img{transition:transform .2s ease}
 .nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
-/* mobile: roomier footer tap targets */
 @media(max-width:640px){.footer-links a{display:inline-block;padding:10px 12px}.page{padding-top:32px}.page h1{font-size:1.8rem}}
+/* Focus visible for keyboard accessibility */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+/* Respect reduced motion preference */
+@media(prefers-reduced-motion:reduce){
+  .nav .brand img{transition:none}
+  *{transition:none!important}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="nav">
-    <a class="brand" href="/"><img src="https://files.catbox.moe/vlw5hl.webp" alt="I Am The Casino" style="height:44px;vertical-align:middle;border-radius:50%"></a>
+    <a class="brand" href="/"><img src="/assets/logo.webp" alt="I Am The Casino" style="height:44px;vertical-align:middle;border-radius:50%"></a>
     <div class="nav-links"><a href="/articles/">Articles</a></div>
     <div class="lang-switch"><a href="/" class="active">EN</a><a href="/tw/">中</a></div>
   </nav>
@@ -60,7 +87,7 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
   <h1>Terms <span class="gold">of Use</span></h1>
   <p class="updated">Effective date: November 6, 2026 · Last updated: November 6, 2026</p>
 
-  <p>By accessing or using iamthecasino.com ("the Site"), you agree to these Terms of Use. If you do not agree, please do not use the Site. The Site is operated by Hedgewiz ("we", "us").</p>
+  <p>By accessing or using iamthecasino.com (\"the Site\"), you agree to these Terms of Use. If you do not agree, please do not use the Site. The Site is operated by Hedgewiz (\"we\", \"us\").</p>
 
   <h2>1. Educational content only — not financial advice</h2>
   <p>All content on this Site — including articles, guides, simulators, and commentary about options trading, casino games, and travel — is provided for education and entertainment only. It is not financial advice, investment advice, or a recommendation to buy, sell, or trade any security or to place any bet.</p>
@@ -104,6 +131,41 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
     <p>© 2026 I Am The Casino · <a href="https://hedgewizs.github.io/thecasinocruiser/">The Casino Cruiser</a></p>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('a').forEach(function(link){
+  link.addEventListener('click', function(){
+    if (typeof gtag === 'function') {
+      gtag('event', 'link_click', { link_url: this.href, link_text: this.textContent.trim() });
+    }
+  });
+});
+</script>
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);padding:16px 20px;z-index:9999;font-size:.88rem;color:var(--text);box-shadow:0 -4px 20px rgba(0,0,0,.3)">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;max-width:1080px;margin:0 auto">
+    <p style="margin:0;max-width:600px">We use cookies for analytics (GA4) and ads (AdSense). By continuing, you accept our <a href="/privacy-policy.html" style="color:var(--gold)">Privacy Policy</a>.</p>
+    <div style="display:flex;gap:12px">
+      <button id="cookie-accept" class="btn btn-primary" style="padding:8px 16px;font-size:.85rem">Accept</button>
+      <button id="cookie-decline" class="btn btn-ghost" style="padding:8px 16px;font-size:.85rem">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var accepted = localStorage.getItem('cookie-consent');
+  if (!accepted) { banner.style.display = 'block'; }
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2871648321226549" crossorigin="anonymous"></script>
 </body>
 </html>
