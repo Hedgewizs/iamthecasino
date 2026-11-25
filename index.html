@@ -9,13 +9,87 @@
   gtag('config', 'G-HFRQ2Q21MV');
 </script>
 
+<link rel="canonical" href="https://iamthecasino.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iamthecasino.com/">
+<meta property="og:title" content="I Am The Casino — Options Income, Casino Math & Comp Cruises">
+<meta property="og:description" content="Be the house. Options income, casino advantage play, comp cruises, and hotel deals — honest math, no guru nonsense.">
+<meta property="og:image" content="https://iamthecasino.com/assets/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://iamthecasino.com/">
+<meta name="twitter:title" content="I Am The Casino — Options Income, Casino Math & Comp Cruises">
+<meta name="twitter:description" content="Be the house. Options income, casino advantage play, comp cruises, and hotel deals — honest math, no guru nonsense.">
+<meta name="twitter:image" content="https://iamthecasino.com/assets/logo.webp">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>I Am The Casino — Options Income, Casino Math &amp; Comp Cruises</title>
+<title>I Am The Casino — Options Income, Casino Math & Comp Cruises</title>
 <meta name="description" content="Be the house. Options income, casino advantage play, comp cruises, and hotel deals — honest math, no guru nonsense.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "I Am The Casino",
+  "url": "https://iamthecasino.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://iamthecasino.com/articles/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Casino Advantage Play Labs",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "WebPage",
+        "name": "Craps Lab",
+        "url": "https://hedgewizs.github.io/craps-lab/",
+        "description": "Every craps bet simulated 100,000 times. Strategy presets, dealer training, payout drills, advantage-play guide."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "WebPage",
+        "name": "Baccarat Lab",
+        "url": "https://hedgewizs.github.io/baccarat-lab/",
+        "description": "Full 8-deck simulator, all five scoreboards, side-bet card counting with published triggers."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "WebPage",
+        "name": "Roulette Lab",
+        "url": "https://hedgewizs.github.io/roulette-lab/",
+        "description": "European, American, and triple-zero wheels. Betting methods tested honestly, French call bets."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "WebPage",
+        "name": "Blackjack Lab",
+        "url": "https://hedgewizs.github.io/blackjack-lab/",
+        "description": "Six rule variants, six side bets, and a full card-counting course — Hi-Lo, KO, Omega II, bet sizing, and camouflage."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preload" as="image" href="https://files.catbox.moe/vlw5hl.webp" type="image/webp">
 <style>
 :root{
-  --bg:#0b0e14; --bg2:#0f1420; --card:#131926; --line:#232c40;
+  --bg:#0b0e14; --bg2:#0f1420; --card:#121824; --line:#232c40;
   --gold:#f5b942; --gold2:#e8930c; --text:#eef1f6; --muted:#98a2b6;
   --green:#3ddc84; --radius:14px;
 }
@@ -93,6 +167,14 @@ footer .disclaimer{max-width:760px;margin:0 auto 16px;font-size:.8rem;opacity:.7
   /* footer: roomier tap targets */
   .footer-links a{display:inline-block;padding:10px 12px}
   .newsletter{padding:32px 20px}
+}
+/* Focus visible for keyboard accessibility */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+/* Respect reduced motion preference */
+@media(prefers-reduced-motion:reduce){
+  .tab-panel.active{animation:none}
+  .nav .brand img{transition:none}
+  *{transition:none!important}
 }
 .nav .brand img{transition:transform .2s ease}
 .nav .brand img:hover{transform:scale(1.08) rotate(-3deg)}
@@ -186,6 +268,19 @@ document.querySelectorAll('.tab-btn').forEach(function(btn){
     document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
     btn.classList.add('active');
     document.getElementById('panel-' + btn.getAttribute('data-tab')).classList.add('active');
+    // GA4 event: tab click
+    if (typeof gtag === 'function') {
+      gtag('event', 'tab_click', { tab_name: btn.getAttribute('data-tab') || btn.textContent.trim() });
+    }
+  });
+});
+// Card clicks tracking
+document.querySelectorAll('a.card').forEach(function(card){
+  card.addEventListener('click', function(){
+    if (typeof gtag === 'function') {
+      var title = card.querySelector('h3');
+      gtag('event', 'card_click', { card_name: title ? title.textContent.trim() : 'unknown' });
+    }
   });
 });
 // Deep-link tabs via hash: #tab-casino etc.
@@ -196,5 +291,30 @@ document.querySelectorAll('.tab-btn').forEach(function(btn){
 })();
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2871648321226549" crossorigin="anonymous"></script>
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);padding:16px 20px;z-index:9999;font-size:.88rem;color:var(--text);box-shadow:0 -4px 20px rgba(0,0,0,.3)">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;max-width:1080px;margin:0 auto">
+    <p style="margin:0;max-width:600px">We use cookies for analytics (GA4) and ads (AdSense). By continuing, you accept our <a href="/privacy-policy.html" style="color:var(--gold)">Privacy Policy</a>.</p>
+    <div style="display:flex;gap:12px">
+      <button id="cookie-accept" class="btn btn-primary" style="padding:8px 16px;font-size:.85rem">Accept</button>
+      <button id="cookie-decline" class="btn btn-ghost" style="padding:8px 16px;font-size:.85rem">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var accepted = localStorage.getItem('cookie-consent');
+  if (!accepted) { banner.style.display = 'block'; }
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>
